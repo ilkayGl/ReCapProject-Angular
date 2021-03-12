@@ -1,4 +1,4 @@
-<!-- <h2 class="text-center">Araç Listesi</h2>
+<h2 class="text-center">Araç Listesi</h2>
 
 <div *ngIf="dataLoaded == false" class="text-center">
   <div class="spinner-border text-dark text-center" role="status">
@@ -20,12 +20,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let car of cars">
+    <tr *ngFor="let car of cardetaildto">
       <td>{{car.carId}}</td>
       <td>{{car.carName}}</td>
+      <td>{{car.brandName}}</td>
+      <td>{{car.colorName}}</td>
       <td>{{car.modelYear}}</td>
       <td>{{car.dailyPrice}}</td>
       <td>{{car.description}}</td>
     </tr>
   </tbody>
-</table> -->
+</table>

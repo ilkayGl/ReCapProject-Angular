@@ -10,17 +10,15 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Müşteri-Id</th>
-      <th scope="col">Kullanıcı-Id</th>
-      <th scope="col">Müşteri İsmi</th>
+      <th scope="col">Marka</th>
+      <th scope="col">Renk</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let customer of customers">
+    <tr *ngFor="let brand of branddetaildto">
       <td></td>
-      <td>{{customer.customerId}}</td>
-      <td>{{customer.userId}}</td>
-      <td>{{customer.companyName}}</td>
+      <td>{{brand.brandName}}</td>
+      <td>{{brand.colorName}}</td>
     </tr>
   </tbody>
 </table>

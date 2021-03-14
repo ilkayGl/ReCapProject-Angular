@@ -1,7 +1,32 @@
-.html {
-  background: url(https://www.denverinsuranceteam.com/wp-content/uploads/sites/101/2015/07/img-2.jpg) center center;
+.url {
+  background: url(https://www.hitrentacar.com/dosya/icerik/371-1-bugun-aracinizi-nereden-alirdiniz.png)no-repeat center center / cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: auto;
+  width: 100%;
+
+}
+
+.url2 {
+  background: url(https://www.turkiyeduysun.com/wp-content/uploads/2018/11/firmadeks-atmaca-rent-a-car-istanbul-arac-kiralama-firmasi.jpg)no-repeat center center / cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+
+}
+
+.url3 {
+  background: url(https://www.waycar.com.tr/dosya/2105/manset/6-1-senetsiz-mobil.jpeg)no-repeat center center / cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+
 }

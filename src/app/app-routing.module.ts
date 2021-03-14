@@ -8,6 +8,7 @@ import { RentaldetaildtoComponent } from './components/rentaldetaildto/rentaldet
 
 
 const routes: Routes = [
+  { path: "", pathMatch: "full", component: CardetaildtoComponent },
   { path: 'car', component: CardetaildtoComponent, },
   { path: 'brand', component: BranddetaildtoComponent },
   { path: 'color', component: ColorComponent },

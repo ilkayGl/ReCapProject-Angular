@@ -1,6 +1,7 @@
 import { CarDetailDto } from './../../Models/carDetailDto';
 import { Component, OnInit } from '@angular/core';
 import { CardetaildtoService } from 'src/app/services/cardetaildto.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cardetaildto',
@@ -14,6 +15,7 @@ export class CardetaildtoComponent implements OnInit {
   constructor(private cardetaildtoService: CardetaildtoService) { }
 
   ngOnInit(): void {
+
     this.getCarDetailDto();
   }
 
@@ -23,5 +25,7 @@ export class CardetaildtoComponent implements OnInit {
       this.dataLoaded = true;
     });
   }
+
+
 
 }

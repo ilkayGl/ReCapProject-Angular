@@ -1,4 +1,4 @@
-<h2 class="text-center">Renk Listesi</h2>
+<h2 class="text-center">Araçlar</h2>
 
 <div *ngIf="dataLoaded == false" class="text-center">
   <div class="spinner-border text-dark text-center" role="status">
@@ -11,14 +11,17 @@
   <thead class="table-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Renk</th>
+      <th scope="col">Model</th>
+      <th scope="col">Araç Rengi</th>
+
 
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let color of colors">
-      <td>{{color.colorId}} </td>
-      <td routerLink="/cars/getcarsbycolorId/{{color.colorId}}">{{color.colorName}}</td>
+    <tr *ngFor="let car of cars">
+      <td>{{car.colorId}} </td>
+      <td>{{car.carName}}</td>
+      <td>{{car.colorName}}</td>
 
     </tr>
   </tbody>

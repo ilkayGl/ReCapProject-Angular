@@ -11,6 +11,7 @@ import { CardetaildtoComponent } from './components/cardetaildto/cardetaildto.co
 import { BranddetaildtoComponent } from './components/branddetaildto/branddetaildto.component';
 import { RentaldetaildtoComponent } from './components/rentaldetaildto/rentaldetaildto.component';
 import { CarComponent } from './components/car/car.component';
+import { BrandComponent } from './components/brand/brand.component';
 
 
 
@@ -26,6 +27,7 @@ import { CarComponent } from './components/car/car.component';
     BranddetaildtoComponent,
     RentaldetaildtoComponent,
     CarComponent,
+    BrandComponent,
 
 
 

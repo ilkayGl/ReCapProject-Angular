@@ -17,7 +17,7 @@
   <tbody>
     <tr *ngFor="let brand of branddetaildto">
       <td>{{brand.brandId}} </td>
-      <td>{{brand.brandName}}</td>
+      <td routerLink="/cars/getcarsbybrandId/{{brand.brandId}}">{{brand.brandName}}</td>
       <td>{{brand.colorName}}</td>
     </tr>
   </tbody>

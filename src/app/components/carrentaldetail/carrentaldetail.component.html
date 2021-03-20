@@ -1,0 +1,23 @@
+<h4 style="text-align: center">Rental Cars</h4>
+
+<table class="table">
+  <thead class="table-light">
+    <tr>
+      <td scope="col">Brand</td>
+      <td scope="col">Color</td>
+      <td scope="col">Customer</td>
+      <td scope="col">Rent Date</td>
+      <td scope="col">Return Date</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let carRentalDetail of carRentalDetails">
+      <td scope="col">{{ carRentalDetail.carName }}</td>
+      <td scope="col">{{ carRentalDetail.colorName }}</td>
+      <td scope="col">{{ carRentalDetail.customerInfo }}</td>
+      <td scope="col">{{carRentalDetail.rentDate | date:'dd-MM-YYYY'}}</td>
+      <td scope="col">{{(carRentalDetail.returnDate == null)? "Not Received.": carRentalDetail.returnDate | date:'dd-MM-YYYY'}}</td>
+    </tr>
+  </tbody>
+</table>
+

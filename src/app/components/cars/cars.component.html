@@ -1,0 +1,72 @@
+<!-- <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-header">
+      Featured
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+      <div class="d-grid gap-2 col-6 mx-auto"></div>
+      <button type="button" class="btn btn-outline-success">Success</button>
+  </div>
+  </ul>
+</div>
+</div> -->
+<!-- 
+<div class="row">
+  <div
+    *ngFor="let carDetail of carDetails"
+    class="card"
+    style="width: 18rem"
+  >
+    <img src="https://localhost:44310/{{carDetail.imagePath}}" class="card-img-top" alt="..." weight="300px" height="300px" />
+    <div class="card" style="width: 18rem">
+      <div class="card-header">{{carDetail.brandName}} {{carDetail.brandModel}}</div>
+      <div>
+      <ul class="list-group list-group-flush" >
+        <li class="list-group-item">{{carDetail.colorName}}</li>
+        <li class="list-group-item">{{carDetail.modelYear}}</li>
+        <li class="list-group-item">{{carDetail.description}}</li>
+        <li class="list-group-item">{{carDetail.dailyPrice}} ₺</li>
+        <div class="col-6 mx-auto">
+        <button type="button" class="btn btn-outline-success">Details</button>
+      </div>
+      </ul>
+    </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="d-flex flex-wrap justify-content-center justify-content-xl-start"
+  style="gap: 0.75em; padding: 0; margin-top: 20px">
+  <div *ngFor="let carDetail of carDetails" class="card" style="width: 18rem">
+    <div class="d-flex" style="height: 45%">
+      <div class="carousel-item" *ngFor="let image of carDetails; index as i; first as firstImage"
+        [ngClass]="{ active: firstImage }">
+        <img src="https://localhost:44310/{{ carDetail.imagePath[0]}}" class="card-img-top" alt=""
+          style="height: 100%; width: 100%; object-fit: cover" />
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-center">
+        {{ carDetail.brandName }} {{ carDetail.brandModel }}
+      </h5>
+      <p class="card-text text-center">{{ carDetail.description }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-center">{{ carDetail.colorName }}</li>
+      <li class="list-group-item text-center">{{ carDetail.modelYear }}</li>
+      <li class="list-group-item text-center">{{ carDetail.dailyPrice }} ₺</li>
+    </ul>
+    <div class="card-body d-grid gap-2 col-6 mx-auto">
+      <button type="button" routerLink="/detail/{{ carDetail.carId }}" class="btn btn-dark text-center">
+        Details
+      </button>
+    </div>
+  </div>
+</div>

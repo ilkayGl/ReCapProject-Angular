@@ -1,28 +1,21 @@
-<h2 class="text-center">Araç Modelleri</h2>
-
-<div *ngIf="dataLoaded == false" class="text-center">
-  <div class="spinner-border text-dark text-center" role="status">
-    <span class="visually-hidden">Loading...</span>
+<ul class="list-group">
+  <div class="mt-1 mb-3">
+    <li
+      (click)="getAllCars()"
+      class="list-group-item active"
+      aria-disabled="true"
+      routerLink="cars"
+      display="inline"
+    >
+      <h5>All Cars</h5>
+    </li>
   </div>
-</div>
-
-
-<table *ngIf="dataLoaded == true" class="table table-hover">
-  <thead class="table-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Model</th>
-
-
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let car of brands">
-      <td>{{car.brandId}} </td>
-      <td>{{car.brandName}}</td>
-
-
-    </tr>
-  </tbody>
-</table>
+  <li class="list-group-item disabled" aria-disabled="true"><h5>Brands</h5></li>
+  <li
+    (click)="doFilter(brand)"
+    [class]="getCurrentBrandClass(brand)"
+    *ngFor="let brand of brands"
+  >
+    <h6>{{ brand.brandName }}</h6>
+  </li>
+</ul>

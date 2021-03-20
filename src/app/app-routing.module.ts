@@ -1,24 +1,15 @@
-import { CardetaildtoComponent } from './components/cardetaildto/cardetaildto.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ColorComponent } from './components/color/color.component';
-import { CustomerComponent } from './components/customer/customer.component';
-import { BranddetaildtoComponent } from './components/branddetaildto/branddetaildto.component';
-import { RentaldetaildtoComponent } from './components/rentaldetaildto/rentaldetaildto.component';
-import { CarComponent } from './components/car/car.component';
-import { BrandComponent } from './components/brand/brand.component';
-
+import { CardetailComponent } from './components/cardetail/cardetail.component';
+import { CarsComponent } from './components/cars/cars.component';
 
 const routes: Routes = [
-  { path: "", pathMatch: "full", component: CardetaildtoComponent },
-  { path: 'car', component: CardetaildtoComponent, },
-  { path: 'brand', component: BranddetaildtoComponent },
-  { path: 'color', component: ColorComponent },
-  { path: 'customer', component: CustomerComponent },
-  { path: 'rental', component: RentaldetaildtoComponent },
-  { path: 'cars/getcarsbycolorId/:colorId', component: CarComponent },
-  { path: 'cars/getcarsbybrandId/:brandId', component: BrandComponent },
-
+  {path:'' , pathMatch:'full', component:CarsComponent},
+  {path:'cars', component:CarsComponent},
+  // {path:'cars/brand/:brandId', component:CarsComponent},
+  // {path:'cars/color/:colorId', component:CarsComponent},
+  {path:'cars/detail/:carId', component:CardetailComponent},
+  {path:'detail/:carId', component:CardetailComponent}
 
 ];
 
